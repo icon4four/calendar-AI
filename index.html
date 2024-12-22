@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Event Calendar</h1>
+    <button id="viewEvents">View Events</button>
+    <button id="openChat">Open Chat</button>
+  </header>
+  <main>
+    <!-- Calendar Container -->
+    <div id="calendarContainer">
+      <!-- Month and Year Navigation -->
+      <div id="monthYear">
+        <button id="prevMonth">‹</button>
+        <span id="currentMonthYear"></span>
+        <button id="nextMonth">›</button>
+      </div>
+      <!-- Weekdays Row -->
+      <div id="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <!-- Calendar Dates -->
+      <div id="calendar"></div>
+    </div>
+  </main>
+</body>
+</html>

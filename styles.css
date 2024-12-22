@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#calendarContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Month and Year Navigation */
+#monthYear {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#prevMonth,
+#nextMonth {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+  color: #0056b3;
+}
+
+#currentMonthYear {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Weekdays Row */
+#weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#weekdays div {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+/* Calendar Dates Styling */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+/* Individual Day Styling */
+#calendar .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Hover effect for day */
+#calendar .day:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Empty days (before the 1st of the month) */
+#calendar .empty {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+/* Days with events highlighted */
+#calendar .has-event {
+  background-color: #f4c542;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  #calendar {
+    grid-template-columns: repeat(7, 1fr);
+    padding: 5px;
+  }
+
+  #monthYear {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #currentMonthYear {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
